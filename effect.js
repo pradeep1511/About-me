@@ -7,13 +7,13 @@ $('document').ready(function(){
 		$(window).resize(function(){
 			 vw = $(window).width()/2;
 			$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-			$('#b11').animate({top:240, left: vw-350},400);
-			$('#b22').animate({top:240, left: vw-250},400);
-			$('#b33').animate({top:240, left: vw-150},400);
-			$('#b44').animate({top:240, left: vw-50},400);
-			$('#b55').animate({top:240, left: vw+50},400);
-			$('#b66').animate({top:240, left: vw+150},400);
-			$('#b77').animate({top:240, left: vw+250},400);
+			$('#b11').animate({top:150, left: vw-350},400);
+			$('#b22').animate({top:150, left: vw-250},400);
+			$('#b33').animate({top:150, left: vw-150},400);
+			$('#b44').animate({top:150, left: vw-50},400);
+			$('#b55').animate({top:150, left: vw+50},400);
+			$('#b66').animate({top:150, left: vw+150},400);
+			$('#b77').animate({top:150, left: vw+250},400);
 		});
 
 	$('#turn_on').click(function(){
@@ -52,8 +52,8 @@ $('document').ready(function(){
 	});
 
 	function loopOne() {
-		var randleft = 1000*Math.random();
-		var randtop = 500*Math.random();
+		var randleft = 100*Math.random();
+		var randtop = 50*Math.random();
 		$('#b1').animate({left:randleft,bottom:randtop},10000,function(){
 			loopOne();
 		});
