@@ -11,9 +11,9 @@ $('document').ready(function(){
 			$('#b22').animate({top:240, left: vw-250},500);
 			$('#b33').animate({top:240, left: vw-150},500);
 			$('#b44').animate({top:240, left: vw-50},500);
-			$('#b55').animate({top:240, left: vw+150},500);
-			$('#b66').animate({top:240, left: vw+250},500);
-			$('#b77').animate({top:240, left: vw+350},500);
+			$('#b55').animate({top:240, left: vw+50},500);
+			$('#b66').animate({top:240, left: vw+150},500);
+			$('#b77').animate({top:240, left: vw+250},500);
 		});
 
 	$('#turn_on').click(function(){
@@ -118,7 +118,7 @@ $('document').ready(function(){
 		loopFive();
 		loopSix();
 		loopSeven();
-		
+
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
@@ -138,7 +138,7 @@ $('document').ready(function(){
 		});
 	});
 
-		
+
 	$('#wish_message').click(function(){
 		 vw = $(window).width()/2;
 
@@ -154,33 +154,33 @@ $('document').ready(function(){
 		$('#b22').animate({top:240, left: vw-250},500);
 		$('#b33').animate({top:240, left: vw-150},500);
 		$('#b44').animate({top:240, left: vw-50},500);
-		$('#b55').animate({top:240, left: vw+150},500);
-		$('#b66').animate({top:240, left: vw+250},500);
-		$('#b77').animate({top:240, left: vw+350},500);
+		$('#b55').animate({top:240, left: vw+50},500);
+		$('#b66').animate({top:240, left: vw+150},500);
+		$('#b77').animate({top:240, left: vw+250},500);
 		$('.balloons').css('opacity','0.9');
 		$('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#story').fadeIn('slow');
 		});
 	});
-	
+
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
-		
+
 		var i;
 
 		function msgLoop (i) {
 			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
 			i=i+1;
-			$("p:nth-child("+i+")").fadeIn('slow').delay(1500);
+			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
 				});
-				
+
 			}
 			else{
 				msgLoop(i);
@@ -189,13 +189,8 @@ $('document').ready(function(){
 		});
 			// body...
 		}
-		
+
 		msgLoop(0);
-		
+
 	});
 });
-
-
-
-
-//alert('hello');
