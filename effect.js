@@ -103,7 +103,20 @@ $('document').ready(function(){
 			loopSeven();
 		});
 	}
-
+	function loopEight() {
+		var randleft = 1000*Math.random();
+		var randtop = 500*Math.random();
+		$('#b8').animate({left:randleft,bottom:randtop},10000,function(){
+			loopEight();
+		});
+	}
+	function loopNine() {
+		var randleft = 1000*Math.random();
+		var randtop = 500*Math.random();
+		$('#b9').animate({left:randleft,bottom:randtop},10000,function(){
+			loopNine();
+		});
+	}
 	$('#balloons_flying').click(function(){
 		$('.balloon-border').animate({top:-500},8000);
 		$('#b1,#b4,#b5,#b7,#b9').addClass('balloons-rotate-behaviour-one');
@@ -120,6 +133,8 @@ $('document').ready(function(){
 		loopFive();
 		loopSix();
 		loopSeven();
+		loopEight();
+		loopNine();
 		
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
